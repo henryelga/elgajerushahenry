@@ -1,18 +1,20 @@
-import { Hero } from "./components/Hero";
 import { About } from "./components/About";
-import { Timeline } from "./components/Timeline";
-import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
+import { Hero } from "./components/Hero";
+import { Projects } from "./components/Projects";
+import { Skills } from "./components/Skills";
+import { WorkTimeline } from "./components/WorkTimeline";
 
 function App() {
   return (
-    <div className="font-sans text-gray-800">
+    <>
       <Hero />
       <About />
-      <Timeline />
+      <WorkTimeline />
+      <Skills />
       <Projects />
       <Contact />
-    </div>
+    </>
   );
 }
 
