@@ -12,10 +12,9 @@ const sections = [
 export const Navbar = () => {
   const [active, setActive] = useState("about");
 
-  // Detect active section on scroll
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPos = window.scrollY + 150; // add offset for header height
+      const scrollPos = window.scrollY + 150;
       for (const id of sections) {
         const section = document.getElementById(id);
         if (
@@ -33,14 +32,16 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md shadow z-50">
-      <div className="max-w-5xl mx-auto flex justify-center space-x-8 py-4">
+    <nav className="fixed top-0 right-0 px-8 py-4 z-50">
+      <div className="flex space-x-8">
         {sections.map((id) => (
           <a
             key={id}
             href={`#${id}`}
-            className={`relative text-gray-700 font-medium transition-colors ${
-              active === id ? "text-blue-600" : "hover:text-blue-600"
+            className={`relative font-medium transition-colors ${
+              active === id
+                ? "text-blue-600"
+                : "text-gray-700 hover:text-blue-600"
             }`}
           >
             {id.charAt(0).toUpperCase() + id.slice(1)}
