@@ -20,7 +20,7 @@ export const Projects = () => {
   return (
     <section
       id="projects"
-      className="min-h-screen py-20 bg-gray-100 text-gray-900"
+      className="min-h-screen py-20 bg-[#080807] text-[#D1D1C7]"
     >
       <h2 className="text-3xl font-bold text-center mb-10">Projects</h2>
       <div className="grid gap-8 md:grid-cols-3 max-w-6xl mx-auto px-6">
@@ -30,7 +30,7 @@ export const Projects = () => {
             href={p.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow"
+            className="bg-[#D1D1C7] text-[#080807] p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow"
           >
             <h3 className="text-xl font-semibold mb-2">{p.title}</h3>
             <p>{p.desc}</p>

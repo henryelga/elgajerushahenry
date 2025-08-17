@@ -8,7 +8,7 @@ import { WorkTimeline } from "./components/WorkTimeline";
 
 function App() {
   return (
-    <main className="bg-gray-950 text-white">
+    <main className="bg-[#080807] text-white">
       <Navbar />
       <About />
       <WorkTimeline />

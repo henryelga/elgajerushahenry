@@ -16,7 +16,10 @@ const contacts = [
 
 export const Contact = () => {
   return (
-    <section id="contact" className="min-h-screen py-20 bg-gray-900 text-white">
+    <section
+      id="contact"
+      className="min-h-screen py-20 bg-[#080807] text-[#D1D1C7]"
+    >
       <h2 className="text-3xl font-bold text-center mb-10">Connect With Me</h2>
       <div className="flex justify-center gap-8">
         {contacts.map((c, idx) => (

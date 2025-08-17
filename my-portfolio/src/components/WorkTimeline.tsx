@@ -1,66 +1,35 @@
+import { motion } from "framer-motion";
+import { useRef } from "react";
+
 const experiences = [
   {
     role: "RG & AML Agent",
     company: "QuinnBet · Part-time",
     location: "Ireland - Remote",
     period: "Sept 2025 - Present",
-    description: "",
   },
   {
     role: "Software Developer",
     company: "ABB · Internship",
     location: "Dundalk, Ireland - On-site",
     period: "Jan 2025 - Sep 2025",
-    description: `- Contributed to the development and migration of QMS software to a web-based platform, ensuring cross-device compatibility (desktop and tablet).
-- Gained full-stack development experience, collaborating on both client-side and server-side tasks to improve tool stability, usability, and performance.
-- Raised and reviewed pull requests, ensuring code quality and consistency across the development team.
-- Participated in code reviews with teammates, providing feedback on best practices, identifying potential issues, and ensuring high-quality, maintainable code
-- Worked on the Scanner Diagnostic Tool (SDT), implementing improvements in API structure, reconnection logic, and UI responsiveness.
-- Involved in testing and bug identification, prioritizing high-severity issues to improve tool functionality.
-- Helped develop and test features across multiple Platform Engineering Tools, including NP SWS, PCT, and Platform Debug Tool, focusing on system stability and usability.
-- Demonstrated proactive problem-solving by handling blockers independently and improving time/task management in a fast-paced environment.
-- Took initiative on high-priority tasks, fixing bugs, and improved system reliability and performance.
-- Collaborated effectively in team meetings and contributed to sprint planning, task prioritization, and team discussions.`,
   },
   {
     role: "Information Technology Helpdesk Administrator",
     company: "BoyleSports · Part-time",
     location: "Dundalk, Ireland - On-site",
     period: "May 2023 - Jan 2025",
-    description: `- Provided first-line support for all hardware, software, and network issues.
-- Troubleshooted problems to determine severity, and priority and follow through to resolution.
-- Created and maintained knowledge base and problem resolution documentation as required.
-- Responsible for working with third-party service providers to ensure end-to-end support is 
-maintained as required.
-- Escalated IT issues to the Development, Network, or Systems teams where necessary
-- Supported queries on websites and main betting platform applications
-- Responsible for support of peripheral devices such as printers, biometrics, etc.
-- Experience with Office 365 applications, Citrix, Active Directory, Avaya phone systems, Microsoft 
-Windows
-- Responsible for support of on-site and remote users across multiple locations.
-- Responsible for EPOS/Screens support across Retail estate of over 350 sites across the UK and Ireland.
-- Responsible for completing new starter and leaver requests within SLA.`,
   },
   {
     role: "GDSC Core Team Member (Developer/Designer)",
     company: "Google Developer Student Clubs",
     period: "Sep 2023 - Sep 2024",
-    description: `- Collaborated with a team of students to organize and facilitate GDSC events, workshops, and hackathons.
-- Created presentations and posters to promote GDSC events and engage the community.
-- Contributed to GDSC community growth through active participation in meetings, discussions, fostering collaborations`,
   },
   {
     role: "Product Developer Intern",
     company: "iMorph Innovation Center · Internship",
     location: "Chennai, India - Remote",
     period: "Jun 2021 - Aug 2021",
-    description: `- Learned and used Python, JavaScript for developing the product prototypes
-- Worked with front end frameworks like Svelte (a React like JavaScript framework) and Python notebooks (Jupyter)
-- Developed TA-Svelte-App ( A simple Twitter Assistant frontend using Svelte )
-- Developed a Google Chrome Extension to scan a page and display a set of keywords using an internal API
-- Developed a dashboard using Voila and Jupyter notebooks
-- Developed a Covid-19-Dashboard (dashboard created using ipynb widgets)
-- Maintained a read log and a learn log during the development process`,
   },
 ];
 
@@ -86,61 +55,49 @@ const getDuration = (period: string) => {
 };
 
 export const WorkTimeline = () => {
+  const containerRef = useRef<HTMLDivElement>(null); // ref for the section
+
   return (
     <section
+      ref={containerRef} // attach ref here
       id="experience"
-      className="min-h-screen py-20 bg-[#1a1a1a] text-white/90"
+      className="relative bg-[#080807] text-[#D1D1C7] rounded-t-[2rem] px-16 py-16"
     >
-      <h2 className="text-3xl font-bold text-center mb-10">Work Experience</h2>
+      <h2 className="sticky top-2 z-30 font-inconsolata font-bold text-[6rem] md:text-[8rem] uppercase leading-[1] bg-[#080807] pb-[.5em]">
+        Work Experience
+      </h2>
 
-      <div className="max-w-5xl mx-auto">
-        {experiences.map((exp, idx) => (
-          <div key={idx} className="flex items-start mb-12">
-            {/* Left side - Year & Duration */}
-            <div className="w-1/4 text-right pr-6 flex flex-col justify-start mt-2 relative">
-              <span className="text-lg font-semibold text-gray-400">
-                {exp.period}
-              </span>
-              <span className="text-xs text-gray-500 mt-1">
-                {getDuration(exp.period)}
-              </span>
-
-              {/* Timeline line with dots */}
-              <div className="absolute top-0 right-0 h-full flex flex-col items-center">
-                <div className="w-1 bg-gray-600 flex-1"></div>
-                <span className="w-3 h-3 bg-blue-500 rounded-full mt-0.5 mb-0.5"></span>
-                <div className="w-1 bg-gray-600 flex-1"></div>
-              </div>
-            </div>
-
-            {/* Right side - Details */}
-            <div className="w-3/4 pl-6">
-              <div className="bg-[#222222] p-6 rounded-lg shadow-md hover:shadow-lg transition">
-                <h3 className="text-xl font-bold">{exp.role}</h3>
-                <p className="text-med text-gray-400 mt-1">{exp.company}</p>
-                <p className="text-xs text-gray-500 mt-0.5">{exp.location}</p>
-
-                {/* Description as bullet points */}
-                {exp.description && (
-                  <ul className="mt-3 text-gray-300 space-y-1">
-                    {exp.description.split("\n- ").map((point, i) => {
-                      if (!point.trim()) return null;
-                      return (
-                        <li
-                          key={i}
-                          className="before:content-['-'] before:mr-2 before:text-blue-500"
-                        >
-                          {point.replace(/^- /, "")}
-                        </li>
-                      );
-                    })}
-                  </ul>
-                )}
-              </div>
-            </div>
+      {experiences.map((exp, idx) => (
+        <motion.div
+          key={idx}
+          className={`sticky top-[12.5em] bg-[#080807] grid grid-cols-4 gap-8 border-t border-gray-700 mb-8 px-8 pt-8 ${
+            idx !== experiences.length - 1 ? "pb-[6em]" : "pb-0"
+          }`}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          viewport={{ once: false, amount: 0.3 }}
+        >
+          <div className="col-span-1 py-1">
+            <span className="block text-[2.5rem] font-semibold text-[#E8E8E3]">
+              {exp.period}
+            </span>
+            <span className="block text-xl text-gray-400 mt-1">
+              {getDuration(exp.period)}
+            </span>
           </div>
-        ))}
-      </div>
+
+          <div className="col-span-3 px-12">
+            <h3 className="text-[3rem] font-bold" style={{ marginBottom: 0 }}>
+              {exp.role}
+            </h3>
+            <p className="text-xl text-gray-400 mt-1">{exp.company}</p>
+            <p className="text-md text-gray-500">{exp.location}</p>
+          </div>
+        </motion.div>
+      ))}
+
+      <div className="h-96"></div>
     </section>
   );
 };

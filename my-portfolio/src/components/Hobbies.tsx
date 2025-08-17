@@ -32,7 +32,7 @@ export const Hobbies = () => {
   return (
     <section
       id="hobbies"
-      className="min-h-screen py-20 bg-gray-200 text-gray-900"
+      className="min-h-screen py-20 bg-[#080807] text-[#D1D1C7]"
     >
       <h2 className="text-3xl font-bold text-center mb-10">
         Hobbies & Interests
@@ -41,7 +41,7 @@ export const Hobbies = () => {
         {hobbies.map((hobby, idx) => (
           <div
             key={idx}
-            className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition"
+            className="bg-[#D1D1C7] text-[#080807] p-6 rounded-lg shadow hover:shadow-lg transition"
           >
             <h3 className="text-xl font-semibold mb-2">{hobby.category}</h3>
             <ul className="list-disc list-inside space-y-1">

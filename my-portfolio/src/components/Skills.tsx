@@ -68,7 +68,10 @@ const skills = {
 
 export const Skills = () => {
   return (
-    <section id="skills" className="min-h-screen py-20 bg-gray-900 text-white">
+    <section
+      id="skills"
+      className="min-h-screen py-20 bg-[#080807] text-[#D1D1C7]"
+    >
       <h2 className="text-3xl font-bold text-center mb-10">Skills</h2>
       <div className="max-w-5xl mx-auto space-y-8">
         {Object.entries(skills).map(([category, skillList], idx) => (
