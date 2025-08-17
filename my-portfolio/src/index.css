@@ -16,3 +16,7 @@ main {
 section {
   scroll-snap-align: start;
 }
+
+a:hover span.absolute {
+  transform: translateY(0);
+}
