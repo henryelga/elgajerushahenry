@@ -70,23 +70,33 @@ export const Skills = () => {
   return (
     <section
       id="skills"
-      className="min-h-screen py-20 bg-[#080807] text-[#D1D1C7]"
+      className="relative min-h-screen bg-[#080807] text-[#D1D1C7] px-16 pt-16 pb-32"
     >
-      <h2 className="text-3xl font-bold text-center mb-10">Skills</h2>
-      <div className="max-w-5xl mx-auto space-y-8">
+      {/* Heading */}
+      <h2 className="sticky top-0 z-30 font-inconsolata font-bold text-[6rem] md:text-[8rem] uppercase leading-[1] bg-[#080807] pb-4">
+        Skills
+      </h2>
+
+      {/* Skills Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-16 mt-16 max-w-7xl mx-auto">
         {Object.entries(skills).map(([category, skillList], idx) => (
-          <div key={idx}>
-            <h3 className="text-xl font-semibold mb-4">{category}</h3>
-            <div className="flex flex-wrap gap-3">
+          <div key={idx} className="flex flex-col space-y-4">
+            {/* Category title */}
+            <h3 className="text-xl md:text-2xl font-bold border-b border-gray-700 pb-2">
+              {category}
+            </h3>
+
+            {/* Skills listed vertically */}
+            <ul>
               {skillList.map((skill, i) => (
-                <span
+                <li
                   key={i}
-                  className="px-4 py-2 bg-gray-800 rounded-lg shadow hover:bg-gray-700 transition"
+                  className="px-4 py-1 rounded-lg shadow  transition text-md"
                 >
                   {skill}
-                </span>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         ))}
       </div>

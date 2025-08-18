@@ -96,8 +96,6 @@ export const WorkTimeline = () => {
           </div>
         </motion.div>
       ))}
-
-      <div className="h-96"></div>
     </section>
   );
 };
