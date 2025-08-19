@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 const sections = [
   "about",
   "experience",
+  "education",
   "skills",
   "projects",
   "hobbies",

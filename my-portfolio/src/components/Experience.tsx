@@ -61,7 +61,7 @@ export const Experience = () => {
     <section
       ref={containerRef} // attach ref here
       id="experience"
-      className="relative bg-[#080807] text-[#D1D1C7] rounded-t-[2rem] px-16 py-16"
+      className="min-h-[80vh] relative bg-[#080807] text-[#D1D1C7] rounded-t-[2rem] px-16 py-16"
     >
       <h2 className="sticky top-2 z-30 font-inconsolata font-bold text-[6rem] md:text-[8rem] uppercase leading-[1] bg-[#080807] pb-[.5em]">
         Experience
