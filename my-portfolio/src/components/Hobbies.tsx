@@ -62,14 +62,17 @@ export const Hobbies = () => {
                   {hobby.category}
                 </h3>
 
-                {/* Items */}
+                {/* Items with CSS hover scroll */}
                 <ul className="space-y-2">
                   {hobby.items.map((item, i) => (
                     <li
                       key={i}
-                      className="px-3 py-1 rounded-lg  shadow text-md"
+                      className="relative h-[1.5rem] overflow-hidden px-3 py-.5 text-md group"
                     >
-                      {item}
+                      <div className="transition-transform duration-500 ease-in-out group-hover:-translate-y-1/2 cursor-default">
+                        <div>{item}</div>
+                        <div>{item}</div>
+                      </div>
                     </li>
                   ))}
                 </ul>

@@ -91,9 +91,12 @@ export const Skills = () => {
               {skillList.map((skill, i) => (
                 <li
                   key={i}
-                  className="px-4 py-1 rounded-lg shadow  transition text-md"
+                  className="relative h-[2rem] overflow-hidden px-3 py-1 text-md group"
                 >
-                  {skill}
+                  <div className="transition-transform duration-500 ease-in-out group-hover:-translate-y-1/2 cursor-default">
+                    <div>{skill}</div>
+                    <div>{skill}</div>
+                  </div>
                 </li>
               ))}
             </ul>
