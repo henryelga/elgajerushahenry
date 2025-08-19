@@ -59,7 +59,7 @@ export const Projects = () => {
       className="relative min-h-screen bg-[#080807] text-[#D1D1C7] px-16"
     >
       {/* Sticky Header */}
-      <h2 className="sticky top-0 z-50 font-inconsolata font-bold text-[6rem] md:text-[8rem] uppercase leading-[1] bg-[#080807] pb-4">
+      <h2 className="sticky top-0 z-20 font-inconsolata font-bold text-[6rem] md:text-[8rem] uppercase leading-[1] bg-[#080807] pb-4">
         Projects
       </h2>
 

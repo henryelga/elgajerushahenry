@@ -54,7 +54,7 @@ const getDuration = (period: string) => {
   return `(${years} yr${years > 1 ? "s" : ""}${months ? ` ${months} mo` : ""})`;
 };
 
-export const WorkTimeline = () => {
+export const Experience = () => {
   const containerRef = useRef<HTMLDivElement>(null); // ref for the section
 
   return (
@@ -64,7 +64,7 @@ export const WorkTimeline = () => {
       className="relative bg-[#080807] text-[#D1D1C7] rounded-t-[2rem] px-16 py-16"
     >
       <h2 className="sticky top-2 z-30 font-inconsolata font-bold text-[6rem] md:text-[8rem] uppercase leading-[1] bg-[#080807] pb-[.5em]">
-        Work Experience
+        Experience
       </h2>
 
       {experiences.map((exp, idx) => (
