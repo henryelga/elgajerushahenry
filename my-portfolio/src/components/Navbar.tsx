@@ -38,12 +38,15 @@ export const Navbar = () => {
               <a
                 key={s.id}
                 href={`#${s.id}`}
-                className={`relative font-medium transition-colors`}
+                onClick={() => setMenuOpen(false)}
+                className="relative inline-block group transition-colors duration-300 hover:text-[#716A63]"
               >
                 {s.label}
                 {s.id === "about" && (
                   <span className="absolute left-0 -bottom-1 w-full h-0.5 bg-[#393632] rounded"></span>
                 )}
+                {/* Line that grows on hover */}
+                <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-[#716A63] rounded transition-all duration-350 ease-out group-hover:w-full"></span>
               </a>
             ))}
           </div>

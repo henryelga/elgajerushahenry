@@ -7,13 +7,13 @@ export const About = () => {
     >
       {/* Top Row: Headline */}
       <div className="w-full flex justify-between items-center mb-12">
-        <div className="text-lg font-semibold text-gray-700">
+        <div className="text-lg font-semibold text-gray-700 uppercase pl-8 scale-x-130">
           Software Developer
         </div>
       </div>
 
       {/* Full-Width Name */}
-      <h1 className="font-inconsolata font-bold scale-y-110 py-16 text-[8rem] md:text-[12.5rem] uppercase leading-[1] text-center">
+      <h1 className="font-inconsolata font-bold scale-y-120 py-16 text-[8rem] md:text-[12.5rem] uppercase leading-[1] text-center">
         ELGA JERUSHA HENRY
       </h1>
 

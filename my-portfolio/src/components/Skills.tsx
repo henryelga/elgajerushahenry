@@ -24,6 +24,7 @@ const skills = {
     "Flask",
     "Laravel",
     "Bootstrap",
+    "Tailwind",
     "XAMPP",
   ],
   "Tools & Platforms": [
@@ -38,13 +39,13 @@ const skills = {
     "Canva",
   ],
   "Testing & Quality": [
+    "Code Review",
+    "Debugging",
+    "Fixing Bugs",
+    "Test Planning",
     "NUnit",
     "Jest",
     "Playwright",
-    "Test Planning",
-    "Debugging",
-    "Fixing Bugs",
-    "Code Review",
   ],
   "Software Development Practices": [
     "API Development",

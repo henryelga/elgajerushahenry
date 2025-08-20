@@ -1,3 +1,5 @@
+import "@fortawesome/fontawesome-free/css/all.min.css";
+
 import { About } from "./components/About";
 import { Contact } from "./components/Contact";
 import { Hobbies } from "./components/Hobbies";
