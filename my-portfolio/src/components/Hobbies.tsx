@@ -37,7 +37,7 @@ export const Hobbies = () => {
       id="hobbies"
       className="min-h-screen py-20 bg-[#080807] text-[#D1D1C7] md:px-12"
     >
-      <div className="h-[50vh]"></div>
+      <div className="h-[40vh]"></div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-full mx-auto">
         {/* LEFT SIDE: Image */}
         <div className="flex justify-start">

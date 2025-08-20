@@ -6,7 +6,7 @@ export const EducationAwards = () => {
       details: "2022 - Present",
     },
     {
-      degree: "High School Diploma",
+      degree: "High School",
       school: "MCC Campus Matric. Hr. Sec. School",
       details: "2020 - 2022",
     },

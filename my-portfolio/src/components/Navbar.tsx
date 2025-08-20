@@ -41,13 +41,13 @@ export const Navbar = () => {
             href={`#${id}`}
             className={`relative font-medium transition-colors ${
               active === id
-                ? "text-blue-600"
-                : "text-gray-700 hover:text-blue-600"
+                ? "text-[#393632]"
+                : "text-gray-700 hover:text-[#393632]"
             }`}
           >
             {id.charAt(0).toUpperCase() + id.slice(1)}
             {active === id && (
-              <span className="absolute left-0 -bottom-1 w-full h-0.5 bg-blue-600 rounded"></span>
+              <span className="absolute left-0 -bottom-1 w-full h-0.5 bg-[#393632] rounded"></span>
             )}
           </a>
         ))}
