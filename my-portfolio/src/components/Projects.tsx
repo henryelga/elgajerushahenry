@@ -4,28 +4,39 @@ import { useEffect, useRef, useState } from "react";
 
 const projects = [
   {
+    title: "Posture Pal",
+    image: "public/projects/posturePal.png",
+    desc: "Progressive Web App (PWA) that helps students and professionals maintain proper posture and improve overall health.",
+    type: "Group Project",
+    link: "https://github.com/Posture-Pal",
+  },
+  {
     title: "Picnet",
-    image: "",
-    desc: "Social media platform with user authentication, CRUD features, and database management.",
+    image: "public/projects/picnet.png",
+    desc: "Social media platform with authentication, CRUD features, and database integration.",
+    type: "Individual Project",
     link: "https://github.com/henryelga/Picnet",
   },
   {
+    title: "Smart Light System",
+    image: "public/projects/smartLightSystem.png",
+    desc: "IoT application that automates lighting controls with sensors and provides live monitoring via a web interface.",
+    type: "Individual Project",
+    link: "https://github.com/henryelga/SmartLightSystem",
+  },
+  {
     title: "BookBuzz",
-    image: "",
-    desc: "Book review & blog platform with author lookup, search, and random quotes integration.",
+    image: "public/projects/bookBuzz.png",
+    desc: "Book review and blog platform with author lookup, search, and random quotes integration.",
+    type: "Individual Project",
     link: "https://github.com/henryelga/bookBuzz",
   },
   {
-    title: "Start IT: Erasmus+ Project",
-    image: "",
-    desc: "EU project app prototype focused on sustainability and green environment solutions.",
-    link: "#", // no GitHub link provided
-  },
-  {
-    title: "Another Project",
-    image: "",
-    desc: "EU project app prototype focused on sustainability and green environment solutions.",
-    link: "#", // no GitHub link provided
+    title: "Eco Wise (Start IT: Erasmus+)",
+    image: "public/projects/ecoWise.png",
+    desc: "Prototype app for sustainable smart homes, enabling users to control electronic devices and set energy-saving limits.",
+    type: "Group Project",
+    link: "https://www.linkedin.com/posts/elgajerushahenry_erasmus-startit-dkit-activity-7181616991676301313-uA0L?utm_source=share&utm_medium=member_desktop&rcm=ACoAADvvhN8BbHboSPkSuZ5xq_gOtUo9AP3wICo",
   },
 ];
 
@@ -97,15 +108,35 @@ export const Projects = () => {
               ref={(el) => {
                 projectRefs.current[idx] = el;
               }}
-              className="h-[70vh] flex items-center justify-center bg-[#D1D1C7] text-[#080807] rounded-2xl shadow-lg overflow-hidden relative"
+              className="group relative"
             >
-              <img
-                src={p.image}
-                alt={p.title}
-                className="object-cover w-full h-full"
-              />
-              <div className="absolute bottom-8 left-8 text-2xl font-semibold">
-                {p.title}
+              {/* Image wrapper */}
+              <a
+                href={p.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block relative h-[70vh] rounded-2xl overflow-hidden shadow-lg"
+              >
+                {/* Project Image */}
+                <img
+                  src={p.image}
+                  alt={p.title}
+                  className="object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-105 group-hover:brightness-75"
+                />
+
+                {/* Bubble cursor */}
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="w-24 h-24 rounded-full bg-[#080807]/70 flex items-center justify-center text-[#D1D1C7] text-sm font-semibold">
+                    View
+                  </div>
+                </div>
+              </a>
+
+              {/* Project Title + Description */}
+              <div className="mt-4 text-center">
+                <h3 className="text-2xl font-bold text-[#D1D1C7]">{p.title}</h3>
+                <p className="text-sm text-gray-400 italic">{p.type}</p>
+                <p className="mt-2 text-gray-400">{p.desc}</p>
               </div>
             </div>
           ))}
