@@ -14,7 +14,7 @@ const projects = [
     title: "Picnet",
     image: "public/projects/picnet.png",
     desc: "Social media platform with authentication, CRUD features, and database integration.",
-    type: "Individual Project",
+    type: "Pair Project",
     link: "https://github.com/henryelga/Picnet",
   },
   {

@@ -85,7 +85,7 @@ export const Navbar = () => {
             </button>
 
             {/* Menu items */}
-            <ul className="flex flex-col pt-[1em] gap-3 items-center text-5xl md:text-7xl uppercase font-bold text-[#D1D1C7]">
+            <ul className="flex flex-col pt-[1%] gap-3 items-center text-5xl md:text-7xl uppercase font-bold text-[#D1D1C7]">
               {sections.map((s) => (
                 <li key={s.id} className="group">
                   <a
@@ -101,7 +101,7 @@ export const Navbar = () => {
             </ul>
 
             {/* Email (pushed to bottom by flex-col + justify-between) */}
-            <div className="flex flex-col items-center gap-2 group">
+            <div className="flex flex-col items-center gap-2 group mt-[2%]">
               <h4 className="text-lg md:text-xl font-bold uppercase text-gray-400">
                 Email Address
               </h4>

@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { useRef } from "react";
 
 const experiences = [
@@ -68,15 +67,9 @@ export const Experience = () => {
       </h2>
 
       {experiences.map((exp, idx) => (
-        <motion.div
+        <div
           key={idx}
-          className={`sticky top-[12.5em] bg-[#080807] grid grid-cols-4 gap-8 border-t border-gray-700 mb-8 px-8 pt-8 ${
-            idx !== experiences.length - 1 ? "pb-[6em]" : "pb-0"
-          }`}
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.3 }}
+          className={`bg-[#080807] grid grid-cols-4 gap-8 border-t border-gray-700 mb-8 px-8 pt-3 pb-3`}
         >
           <div className="col-span-1 py-1">
             <span className="block text-[2.5rem] font-semibold text-[#E8E8E3]">
@@ -91,10 +84,10 @@ export const Experience = () => {
             <h3 className="text-[3rem] font-bold" style={{ marginBottom: 0 }}>
               {exp.role}
             </h3>
-            <p className="text-xl text-gray-400 mt-1">{exp.company}</p>
+            <p className="text-xl text-gray-400">{exp.company}</p>
             <p className="text-md text-gray-500">{exp.location}</p>
           </div>
-        </motion.div>
+        </div>
       ))}
     </section>
   );

@@ -8,8 +8,7 @@ export const About = () => {
       {/* Top Row: Headline */}
       <div className="w-full flex justify-between items-center mb-12">
         <div className="text-lg font-semibold text-gray-700">
-          ex - Software Developer @ ABB || Generation Google Scholar '24 ||
-          Final Year Software Development Student @ DkIT
+          Software Developer
         </div>
       </div>
 
@@ -20,61 +19,40 @@ export const About = () => {
 
       <div className="text-2xl font-semibold" color="#716A63">
         {/* Bottom Section */}
-        <div
-          className="flex justify-between flex-1 items-end py-10"
-          style={{ color: "#393632" }}
-        >
-          {/* Left: Short Summary + Contact Button */}
-          <div className="flex flex-col space-y-8 max-w-lg">
-            <div>
-              <p className="text-gray-700 px-2 leading-relaxed">
+        <div className="relative w-full h-full">
+          <div className="absolute top-[45vh] bottom-0 left-0 right-0 flex justify-between items-end px-12 pb-10 gap-8">
+            {/* Left: Short Summary + Contact Button */}
+            <div className="flex flex-col space-y-8 max-w-lg">
+              <p className="text-gray-700 leading-relaxed">
                 Final-year Software Development student. Passionate and curious.
                 I love solving problems and always push myself to learn and
                 grow.
               </p>
+              <a
+                href="#contact"
+                className="group relative inline-block px-6 py-3 font-bold uppercase rounded-full w-fit overflow-hidden text-[#E8E3E3] bg-[#393632]"
+              >
+                <span className="absolute inset-0 bg-[#716A63] translate-y-full transition-transform duration-300 ease-in-out group-hover:translate-y-0"></span>
+                <span className="relative z-10">Contact ↗</span>
+              </a>
             </div>
-            <a
-              href="#contact"
-              className="group relative inline-block px-6 py-3 font-bold uppercase rounded-full w-fit overflow-hidden text-[#E8E3E3] bg-[#393632]"
-            >
-              {/* Sliding hover background */}
-              <span className="absolute inset-0 bg-[#716A63] translate-y-full transition-transform duration-300 ease-in-out group-hover:translate-y-0"></span>
 
-              {/* Button text */}
-              <span className="relative z-10">Contact ↗</span>
-            </a>
-          </div>
-
-          {/* Right: Remaining Full About Content */}
-          <div className="max-w-5xl text-lg leading-relaxed text-gray-800">
-            <p>
-              My journey into software development began in 2020 when I taught
-              myself Python through online courses. This sparked my passion for
-              technology, led me to explore HTML, CSS, JavaScript, and other
-              tools. Now, as I enter my final year of study, I'm eager to refine
-              my skills and take the next step toward becoming a well-rounded
-              software developer.
-            </p>
-            <br />
-            <p>
-              One way I keep my problem-solving skills sharp is by exploring
-              different types of Rubik's Cubes. I'm self-taught and enjoy
-              solving a variety of cubes like the 2x2, 3x3, 4x4, 5x5, 6x6,
-              Mirror Cube, Skewb, Barrel Cube, Pyraminx, Gear Cube, and
-              Megaminx.
-            </p>
-            <br />
-            <p>
-              Outside of coding and cubing, I enjoy playing music (piano,
-              harmonica, ukulele), reading mystery, adventure, detective
-              stories, as well as biographies and autobiographies, and staying
-              active through badminton.
-            </p>
-            <br />
-            <p>
-              Adaptable, collaborative, and always curious—I'm ready to take on
-              new challenges and keep learning every day.
-            </p>
+            {/* Right: Remaining Full About Content */}
+            <div className="flex-1 max-w-5xl text-lg leading-relaxed text-gray-800 pb-[2em]">
+              <h3 className="text-2xl font-extrabold">
+                ex - Software Developer @ ABB || Generation Google Scholar '24
+                || Final Year Software Development Student @ DkIT
+              </h3>
+              <br />
+              <p>
+                My journey into software development began in 2020 when I taught
+                myself Python through online courses. This sparked my passion
+                for technology, led me to explore HTML, CSS, JavaScript, and
+                other tools. Now, as I enter my final year of study, I'm eager
+                to refine my skills and take the next step toward becoming a
+                well-rounded software developer.
+              </p>
+            </div>
           </div>
         </div>
       </div>
