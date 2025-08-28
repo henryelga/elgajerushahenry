@@ -17,7 +17,7 @@ export const Hobbies = () => {
         {/* LEFT SIDE: Image */}
         <div className="justify-center md:justify-start hidden md:block">
           <img
-            src="/hobbies.png"
+            src="images/hobbies.png"
             alt="Hobbies"
             className="max-w-full w-full object-cover md:max-w-xl"
           />
