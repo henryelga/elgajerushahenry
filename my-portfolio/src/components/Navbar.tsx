@@ -18,9 +18,16 @@ export const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const experienceSection = document.getElementById("experience");
-      if (experienceSection) {
-        const rect = experienceSection.getBoundingClientRect();
-        setIsMobile(rect.top <= 80); // when experience comes into view
+      if (!experienceSection) return;
+
+      const rect = experienceSection.getBoundingClientRect();
+
+      if (window.innerWidth < 768) {
+        // Mobile → always show hamburger from About itself
+        setIsMobile(true);
+      } else {
+        // Desktop/Laptop → only show hamburger after scrolling to Experience
+        setIsMobile(rect.top <= 80);
       }
     };
 
@@ -57,13 +64,12 @@ export const Navbar = () => {
       {isMobile && (
         <button
           onClick={() => setMenuOpen(true)}
-          className="fixed top-8 right-8 z-50 p-3 rounded-full bg-[#D1D1C7] text-[#080807] shadow-lg"
+          className="fixed top-[3%] right-[3%] z-50 p-3 rounded-full bg-[#D1D1C7] text-[#080807] shadow-lg"
         >
           <Menu size={24} className="cursor-pointer" />
         </button>
       )}
 
-      {/* Overlay Menu */}
       {/* Overlay Menu */}
       <AnimatePresence>
         {menuOpen && (
@@ -76,7 +82,7 @@ export const Navbar = () => {
             {/* Close button */}
             <button
               onClick={() => setMenuOpen(false)}
-              className="absolute top-8 right-8 text-white"
+              className="absolute top-[3%] right-[3%] text-white"
             >
               <X
                 size={"3em"}
@@ -88,7 +94,7 @@ export const Navbar = () => {
             </button>
 
             {/* Menu items */}
-            <ul className="flex flex-col pt-[1%] gap-3 items-center text-5xl md:text-7xl uppercase font-bold text-[#D1D1C7]">
+            <ul className="flex flex-col pt-[1%] gap-3 items-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl uppercase font-bold text-[#D1D1C7] text-center px-4">
               {sections.map((s) => (
                 <li key={s.id} className="group">
                   <a
