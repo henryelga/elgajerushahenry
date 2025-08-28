@@ -77,7 +77,7 @@ export const Navbar = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex flex-col items-center justify-between backdrop-blur-lg bg-black/50 px-8 py-16"
+            className="fixed inset-0 z-50 flex flex-col items-center justify-between backdrop-blur-lg bg-black/50 px-4 sm:px-8 md:px-16 py-8 sm:py-12 md:py-16"
           >
             {/* Close button */}
             <button

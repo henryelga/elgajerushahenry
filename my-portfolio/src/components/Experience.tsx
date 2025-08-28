@@ -69,11 +69,11 @@ export const Experience = () => {
       {experiences.map((exp, idx) => (
         <div
           key={idx}
-          className="bg-[#080807] grid grid-cols-1 sm:grid-cols-4 gap-4 sm:gap-8 border-t border-gray-700 mb-8 px-4 sm:px-8 pt-3 pb-3"
+          className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 border-t border-gray-700 mb-8 px-4 md:px-8 pt-3 pb-3"
         >
           {/* Desktop: Period */}
           <div className="sm:col-span-1 py-1 hidden sm:block">
-            <span className="block text-[2.5rem] font-semibold text-[#E8E8E3]">
+            <span className="block text-[1.8rem] font-semibold text-[#E8E8E3]">
               {exp.period}
             </span>
             <span className="block text-xl text-gray-400 mt-1">
@@ -83,7 +83,7 @@ export const Experience = () => {
 
           {/* Role & Company */}
           <div className="sm:col-span-3 sm:px-12">
-            <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-1">
+            <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-1">
               {exp.role}
             </h3>
             <p className="text-lg sm:text-xl text-gray-400">{exp.company}</p>
