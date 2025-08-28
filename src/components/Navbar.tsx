@@ -24,7 +24,7 @@ export const Navbar = () => {
 
       const rect = experienceSection.getBoundingClientRect();
 
-      if (window.innerWidth < 768) {
+      if (window.innerWidth < 1024) {
         // Mobile → always show hamburger from About itself
         setIsMobile(true);
       } else {
@@ -79,7 +79,8 @@ export const Navbar = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex flex-col items-center justify-between backdrop-blur-lg bg-black/50 px-4 sm:px-8 lg:px-16 py-8 sm:py-12 lg:py-16"
+            className="fixed inset-0 z-50 flex flex-col justify-around items-center 
+             h-screen backdrop-blur-lg bg-black/50 px-4 sm:px-8 lg:px-16 py-4"
           >
             {/* Close button */}
             <button
@@ -96,7 +97,11 @@ export const Navbar = () => {
             </button>
 
             {/* Menu items */}
-            <ul className="flex flex-col pt-[1%] gap-3 items-center text-3xl sm:text-4xl lg:text-5xl lg:text-6xl xl:text-7xl uppercase font-bold text-[#D1D1C7] text-center px-4">
+            <ul
+              className="text-3xl sm:text-4xl lg:text-6xl xl:text-7xl uppercase font-bold flex flex-col gap-3 items-center text-[#D1D1C7] text-center 
+               px-4"
+              style={{ maxHeight: "calc(100vh - 120px)", overflow: "hidden" }}
+            >
               {NAVBAR_SECTIONS.map((s) => (
                 <li key={s.id} className="group">
                   <a
