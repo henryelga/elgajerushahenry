@@ -7,6 +7,7 @@ export const NAVBAR_SECTIONS = [
   { id: "about", label: "About" },
   { id: "experience", label: "Experience" },
   { id: "education", label: "Education" },
+  { id: "skills", label: "Skills" },
   { id: "projects", label: "Projects" },
   { id: "hobbies", label: "Hobbies" },
   { id: "contact", label: "Contact" },
