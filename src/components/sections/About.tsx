@@ -8,12 +8,12 @@ export const About = () => {
   return (
     <section
       id="about"
-      className="min-h-screen w-full flex flex-col text-gray-900 px-6 md:px-12 py-5"
+      className="min-h-screen w-full flex flex-col text-gray-900 px-6 lg:px-12 py-5"
       style={{ backgroundColor: "#E8E8E3", color: "#171717" }}
     >
       {/* Top Row: Headline */}
-      <div className="w-full flex justify-between items-center mb-8 md:mb-12">
-        <div className="text-base md:text-lg font-semibold text-gray-700 uppercase pl-4 md:pl-8 scale-x-130">
+      <div className="w-full flex justify-between items-center mb-8 lg:mb-12">
+        <div className="text-base lg:text-lg font-semibold text-gray-700 uppercase pl-4 lg:pl-8 scale-x-130">
           Software Developer
         </div>
       </div>
@@ -28,7 +28,7 @@ export const About = () => {
       </h1>
 
       {/* -------- MOBILE/TABLET VERSION -------- */}
-      <div className="flex flex-col gap-10 md:hidden mt-8">
+      <div className="flex flex-col gap-10 lg:hidden mt-8">
         {/* Summary + Button */}
         <div className="flex flex-col space-y-6 text-base px-2">
           <p className="text-gray-700 leading-relaxed">
@@ -63,7 +63,7 @@ export const About = () => {
       </div>
 
       {/* -------- DESKTOP / LAPTOP VERSION -------- */}
-      <div className="hidden md:block relative w-full h-full text-2xl font-semibold">
+      <div className="hidden lg:block relative w-full h-full text-2xl font-semibold">
         <div className="absolute top-[45vh] bottom-0 left-0 right-0 flex justify-between items-end px-12 pb-10 gap-8">
           {/* Left: Short Summary + Contact Button */}
           <div className="flex flex-col space-y-8 max-w-lg">

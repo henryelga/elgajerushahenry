@@ -36,18 +36,18 @@ export const Projects = () => {
   return (
     <section
       id="projects"
-      className="relative min-h-screen bg-[#080807] text-[#D1D1C7] px-4 sm:px-8 md:px-16 py-16"
+      className="relative min-h-screen bg-[#080807] text-[#D1D1C7] px-4 sm:px-8 lg:px-16 py-16"
     >
       {/* Sticky Header */}
-      <h2 className="sticky top-0 z-20 font-inconsolata font-bold text-[4rem] sm:text-[6rem] md:text-[8rem] uppercase leading-[1] bg-[#080807] pb-4">
+      <h2 className="sticky top-0 z-20 font-inconsolata font-bold text-[4rem] sm:text-[6rem] lg:text-[8rem] uppercase leading-[1] bg-[#080807] pb-4">
         Projects
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-full">
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 max-w-full">
         {/* LEFT: Sticky number */}
-        <div className="md:col-span-1 md:block justify-center md:justify-start items-center hidden">
-          <div className="sticky top-[8rem] md:top-[8rem] h-0">
-            <div className="flex text-[6rem] sm:text-[8rem] md:text-[16rem] font-bold leading-none">
+        <div className="lg:col-span-1 lg:block justify-center lg:justify-start items-center hidden">
+          <div className="sticky top-[8rem] lg:top-[8rem] h-0">
+            <div className="flex text-[6rem] sm:text-[8rem] lg:text-[16rem] font-bold leading-none">
               <span>0</span>
 
               {/* Slot-machine animation */}
@@ -70,17 +70,17 @@ export const Projects = () => {
         </div>
 
         {/* RIGHT: Projects */}
-        <div className="md:col-span-3 space-y-[10vh]">
+        <div className="lg:col-span-3 space-y-[10vh]">
           {PROJECTS.map((p, idx) => (
             <div
               key={idx}
               ref={(el) => {
                 projectRefs.current[idx] = el;
               }}
-              className="group relative flex flex-col md:flex-col"
+              className="group relative flex flex-col lg:flex-col"
             >
               {/* Number for mobile stacked view */}
-              <div className="md:hidden text-6xl font-bold text-[#D1D1C7] mb-4">
+              <div className="lg:hidden text-6xl font-bold text-[#D1D1C7] mb-4">
                 0{idx + 1}
               </div>
 
@@ -94,7 +94,7 @@ export const Projects = () => {
                 <img
                   src={p.image}
                   alt={p.title}
-                  className="w-full h-auto transition-transform duration-500 ease-in-out group-hover:scale-105 group-hover:brightness-75 object-contain sm:object-contain md:object-cover"
+                  className="w-full h-auto transition-transform duration-500 ease-in-out group-hover:scale-105 group-hover:brightness-75 object-contain sm:object-contain lg:object-cover"
                 />
                 {/* Bubble cursor */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -106,7 +106,7 @@ export const Projects = () => {
 
               {/* Project Title + Description */}
               <div className="mt-4 text-center">
-                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#D1D1C7]">
+                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#D1D1C7]">
                   {p.title}
                 </h3>
                 <p className="text-sm sm:text-base text-gray-400 italic">

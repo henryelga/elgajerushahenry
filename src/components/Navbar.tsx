@@ -79,7 +79,7 @@ export const Navbar = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex flex-col items-center justify-between backdrop-blur-lg bg-black/50 px-4 sm:px-8 md:px-16 py-8 sm:py-12 md:py-16"
+            className="fixed inset-0 z-50 flex flex-col items-center justify-between backdrop-blur-lg bg-black/50 px-4 sm:px-8 lg:px-16 py-8 sm:py-12 lg:py-16"
           >
             {/* Close button */}
             <button
@@ -96,7 +96,7 @@ export const Navbar = () => {
             </button>
 
             {/* Menu items */}
-            <ul className="flex flex-col pt-[1%] gap-3 items-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl uppercase font-bold text-[#D1D1C7] text-center px-4">
+            <ul className="flex flex-col pt-[1%] gap-3 items-center text-3xl sm:text-4xl lg:text-5xl lg:text-6xl xl:text-7xl uppercase font-bold text-[#D1D1C7] text-center px-4">
               {NAVBAR_SECTIONS.map((s) => (
                 <li key={s.id} className="group">
                   <a
@@ -113,7 +113,7 @@ export const Navbar = () => {
 
             {/* Email (pushed to bottom by flex-col + justify-between) */}
             <div className="flex flex-col items-center gap-2 group mt-[2%]">
-              <h4 className="text-lg md:text-xl font-bold uppercase text-gray-400">
+              <h4 className="text-lg lg:text-xl font-bold uppercase text-gray-400">
                 Email Address
               </h4>
               <div className="relative h-[1.5em] overflow-hidden">
@@ -121,10 +121,10 @@ export const Navbar = () => {
                   href="mailto:elgajerushahenry@gmail.com"
                   className="flex flex-col transition-transform duration-500 ease-in-out group-hover:-translate-y-1/2"
                 >
-                  <span className="text-base md:text-lg">
+                  <span className="text-base lg:text-lg">
                     elgajerushahenry@gmail.com
                   </span>
-                  <span className="text-base md:text-lg">
+                  <span className="text-base lg:text-lg">
                     elgajerushahenry@gmail.com
                   </span>
                 </a>

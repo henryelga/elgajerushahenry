@@ -10,29 +10,29 @@ export const Hobbies = () => {
   return (
     <section
       id="hobbies"
-      className="min-h-screen bg-[#080807] text-[#D1D1C7] px-4 sm:px-8 md:px-16 py-16"
+      className="min-h-screen bg-[#080807] text-[#D1D1C7] px-4 sm:px-8 lg:px-16 py-16"
     >
-      <div className="h-[40vh] hidden md:block"></div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 max-w-full mx-auto">
+      <div className="h-[40vh] hidden lg:block"></div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 max-w-full mx-auto">
         {/* LEFT SIDE: Image */}
-        <div className="justify-center md:justify-start hidden md:block">
+        <div className="justify-center lg:justify-start hidden lg:block">
           <img
             src="images/hobbies.png"
             alt="Hobbies"
-            className="max-w-full w-full object-cover md:max-w-xl"
+            className="max-w-full w-full object-cover lg:max-w-xl"
           />
         </div>
 
         {/* RIGHT SIDE: Heading + Hobbies */}
-        <div className="flex flex-col space-y-8 md:space-y-12">
-          <h2 className="font-inconsolata font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase leading-[1] bg-[#080807] pb-2 text-center md:text-left">
+        <div className="flex flex-col space-y-8 lg:space-y-12">
+          <h2 className="font-inconsolata font-bold text-3xl sm:text-4xl lg:text-5xl lg:text-6xl uppercase leading-[1] bg-[#080807] pb-2 text-center lg:text-left">
             Hobbies & Interests
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 lg:gap-12">
             {HOBBIES.map((hobby, idx) => (
               <div key={idx} className="flex flex-col space-y-2 sm:space-y-4">
-                <h3 className="text-xl sm:text-xl md:text-2xl font-bold border-b border-gray-700 pb-1 sm:pb-2">
+                <h3 className="text-xl sm:text-xl lg:text-2xl font-bold border-b border-gray-700 pb-1 sm:pb-2">
                   {hobby.category}
                 </h3>
 

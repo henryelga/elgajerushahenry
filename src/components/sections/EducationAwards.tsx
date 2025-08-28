@@ -10,13 +10,13 @@ export const EducationAwards = () => {
   return (
     <section
       id="education"
-      className="min-h-[80vh] md:py-20 bg-[#080807] text-[#D1D1C7] px-4 sm:px-8 md:px-16 py-16"
+      className="min-h-[80vh] lg:py-20 bg-[#080807] text-[#D1D1C7] px-4 sm:px-8 lg:px-16 py-16"
     >
-      <h2 className="sticky top-2 z-30 font-inconsolata font-bold text-[4rem] sm:text-[5rem] md:text-[6rem] lg:text-[8rem] uppercase leading-[1] bg-[#080807] pb-4 mb-6 md:mb-8">
+      <h2 className="sticky top-2 z-30 font-inconsolata font-bold text-[4rem] sm:text-[5rem] lg:text-[6rem] lg:text-[8rem] uppercase leading-[1] bg-[#080807] pb-4 mb-6 lg:mb-8">
         Education & Honors
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:gap-16 max-w-8xl mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 px-4 lg:gap-16 max-w-8xl mx-auto">
         {/* Education */}
         <div>
           <h3 className="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8 border-b border-gray-600 pb-2">
