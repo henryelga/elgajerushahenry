@@ -1,3 +1,9 @@
+/**
+ * About Section
+ *
+ * Displays a brief introduction including name, headline, and a short summary.
+ * Designed to be visually prominent with large typography and responsive layout.
+ */
 export const About = () => {
   return (
     <section
@@ -13,10 +19,6 @@ export const About = () => {
       </div>
 
       {/* Full-Width Name */}
-      {/* <h1 className="font-inconsolata font-bold scale-y-120 py-10 md:py-16 text-[3rem] sm:text-[5rem] md:text-[8rem] lg:text-[10rem] xl:text-[12.5rem] uppercase leading-[1] text-center">
-        ELGA JERUSHA HENRY
-      </h1> */}
-
       <h1
         className="font-inconsolata font-bold scale-y-120 py-16 
              text-[clamp(3rem,8vw,12.5rem)] 

@@ -1,36 +1,11 @@
-const hobbies = [
-  {
-    category: "Rubik's Cube 🧩",
-    items: [
-      "2x2, 3x3, 4x4, 5x5, 6x6",
-      "Mirror Cube",
-      "Skewb",
-      "Barrel Cube",
-      "Pyraminx",
-      "Gear Cube",
-      "Megaminx",
-    ],
-  },
-  {
-    category: "Music 🎵",
-    items: ["Piano", "Harmonica", "Ukulele"],
-  },
-  {
-    category: "Reading 📚",
-    items: [
-      "Mystery",
-      "Adventure",
-      "Detective Stories",
-      "Biographies",
-      "Autobiographies",
-    ],
-  },
-  {
-    category: "Activities 🎲",
-    items: ["Badminton", "Other fun games and puzzles"],
-  },
-];
+import { HOBBIES } from "../data/hobbies";
 
+/**
+ * Hobbies Section
+ *
+ * Displays personal hobbies and interests categorized into groups.
+ * Includes hover scroll effect for items and responsive layout for mobile portrait/landscape.
+ */
 export const Hobbies = () => {
   return (
     <section
@@ -55,7 +30,7 @@ export const Hobbies = () => {
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-12">
-            {hobbies.map((hobby, idx) => (
+            {HOBBIES.map((hobby, idx) => (
               <div key={idx} className="flex flex-col space-y-2 sm:space-y-4">
                 <h3 className="text-xl sm:text-xl md:text-2xl font-bold border-b border-gray-700 pb-1 sm:pb-2">
                   {hobby.category}

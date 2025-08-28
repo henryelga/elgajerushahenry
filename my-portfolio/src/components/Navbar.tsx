@@ -1,16 +1,18 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react"; // hamburger & close icons
+import { NAVBAR_SECTIONS } from "./data/navbarSections";
 
-const sections = [
-  { id: "about", label: "About" },
-  { id: "experience", label: "Experience" },
-  { id: "education", label: "Education" },
-  { id: "projects", label: "Projects" },
-  { id: "hobbies", label: "Hobbies" },
-  { id: "contact", label: "Contact" },
-];
-
+/**
+ * Navbar component.
+ *
+ * Renders a navigation bar that adapts to desktop, laptop, and mobile screens.
+ * - Desktop/Laptop: Shows full navigation links; hamburger menu appears after scrolling to the Experience section.
+ * - Mobile: Hamburger menu is displayed from the About section.
+ *
+ * Includes animated overlay menu with navigation links and contact email,
+ * using `framer-motion` for animations.
+ */
 export const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -41,7 +43,7 @@ export const Navbar = () => {
       {!isMobile && (
         <nav className="fixed top-0 right-0 px-8 py-4 z-50 text-[#171717]">
           <div className="flex space-x-8">
-            {sections.map((s) => (
+            {NAVBAR_SECTIONS.map((s) => (
               <a
                 key={s.id}
                 href={`#${s.id}`}
@@ -95,7 +97,7 @@ export const Navbar = () => {
 
             {/* Menu items */}
             <ul className="flex flex-col pt-[1%] gap-3 items-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl uppercase font-bold text-[#D1D1C7] text-center px-4">
-              {sections.map((s) => (
+              {NAVBAR_SECTIONS.map((s) => (
                 <li key={s.id} className="group">
                   <a
                     href={`#${s.id}`}

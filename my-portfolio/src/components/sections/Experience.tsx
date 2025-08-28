@@ -1,36 +1,5 @@
 import { useRef } from "react";
-
-const experiences = [
-  {
-    role: "RG & AML Agent",
-    company: "QuinnBet · Part-time",
-    location: "Ireland - Remote",
-    period: "Sept 2025 - Present",
-  },
-  {
-    role: "Software Developer",
-    company: "ABB · Internship",
-    location: "Dundalk, Ireland - On-site",
-    period: "Jan 2025 - Sep 2025",
-  },
-  {
-    role: "Information Technology Helpdesk Administrator",
-    company: "BoyleSports · Part-time",
-    location: "Dundalk, Ireland - On-site",
-    period: "May 2023 - Jan 2025",
-  },
-  {
-    role: "GDSC Core Team Member (Developer/Designer)",
-    company: "Google Developer Student Clubs",
-    period: "Sep 2023 - Sep 2024",
-  },
-  {
-    role: "Product Developer Intern",
-    company: "iMorph Innovation Center · Internship",
-    location: "Chennai, India - Remote",
-    period: "Jun 2021 - Aug 2021",
-  },
-];
+import { EXPERIENCE } from "../data/experience";
 
 // Helper function to calculate duration
 const getDuration = (period: string) => {
@@ -53,6 +22,12 @@ const getDuration = (period: string) => {
   return `(${years} yr${years > 1 ? "s" : ""}${months ? ` ${months} mo` : ""})`;
 };
 
+/**
+ * Experience Section
+ *
+ * Lists professional experience in a timeline/grid format with roles, companies, periods, and duration.
+ * Responsive: stacks into one column on mobile with adjusted font sizes.
+ */
 export const Experience = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -66,7 +41,7 @@ export const Experience = () => {
         Experience
       </h2>
 
-      {experiences.map((exp, idx) => (
+      {EXPERIENCE.map((exp, idx) => (
         <div
           key={idx}
           className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 border-t border-gray-700 mb-8 px-4 md:px-8 pt-3 pb-3"

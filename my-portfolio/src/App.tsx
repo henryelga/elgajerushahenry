@@ -1,13 +1,13 @@
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
-import { About } from "./components/About";
-import { Contact } from "./components/Contact";
-import { Hobbies } from "./components/Hobbies";
+import { About } from "./components/sections/About";
+import { Contact } from "./components/sections/Contact";
+import { Hobbies } from "./components/sections/Hobbies";
 import { Navbar } from "./components/Navbar";
-import { Projects } from "./components/Projects";
-import { Skills } from "./components/Skills";
-import { Experience } from "./components/Experience";
-import { EducationAwards } from "./components/EducationAwards";
+import { Projects } from "./components/sections/Projects";
+import { Skills } from "./components/sections/Skills";
+import { Experience } from "./components/sections/Experience";
+import { EducationAwards } from "./components/sections/EducationAwards";
 
 function App() {
   return (

@@ -1,27 +1,12 @@
+import { EDUCATION, AWARDS } from "../data/education-awards";
+
+/**
+ * Education & Awards Section
+ *
+ * Displays educational background and honors/awards.
+ * Includes clickable award links and certificates. Responsive for mobile and desktop.
+ */
 export const EducationAwards = () => {
-  const education = [
-    {
-      degree: "B.Sc. (Hons) Computing in Software Development",
-      school: "Dundalk Institute of Technology, Ireland",
-      details: "2022 - Present",
-    },
-    {
-      degree: "High School",
-      school: "MCC Campus Matric. Hr. Sec. School",
-      details: "2020 - 2022",
-    },
-  ];
-
-  const awards = [
-    {
-      title: "Generation Google Scholarship: Women in Computer Science",
-      year: "Issued by Google · Sep 2024",
-      desc: `Selected as one of only 11 recipients in Ireland for the prestigious Generation Google Scholarship, 
-      recognizing academic excellence, passion for computer science, and commitment to diversity in tech. 
-      This award includes financial support, access to exclusive Google workshops, and career mentorship opportunities.`,
-    },
-  ];
-
   return (
     <section
       id="education"
@@ -38,7 +23,7 @@ export const EducationAwards = () => {
             Education
           </h3>
           <ul className="space-y-6 sm:space-y-8">
-            {education.map((edu, idx) => (
+            {EDUCATION.map((edu, idx) => (
               <li key={idx}>
                 <h4 className="text-xl sm:text-2xl font-bold">{edu.degree}</h4>
                 <p className="text-base sm:text-lg text-gray-400">
@@ -58,7 +43,7 @@ export const EducationAwards = () => {
             Honors & Awards
           </h3>
           <ul className="space-y-6 sm:space-y-8">
-            {awards.map((award, idx) => (
+            {AWARDS.map((award, idx) => (
               <li key={idx}>
                 <h4 className="text-xl sm:text-2xl font-bold">
                   <a

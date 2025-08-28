@@ -1,23 +1,12 @@
-import { FiMail, FiGithub, FiLinkedin } from "react-icons/fi";
+import { CONTACTS } from "../data/contacts";
 
-const contacts = [
-  {
-    icon: <FiMail />,
-    label: "Email",
-    link: "mailto:elgajerushahenry@gmail.com",
-  },
-  {
-    icon: <FiLinkedin />,
-    label: "LinkedIn",
-    link: "https://www.linkedin.com/in/elgajerushahenry/",
-  },
-  {
-    icon: <FiGithub />,
-    label: "GitHub",
-    link: "https://github.com/henryelga",
-  },
-];
-
+/**
+ * Contact section component.
+ *
+ * Displays a "Connect With Me" heading and a set of contact links
+ * (email, LinkedIn, GitHub) using the `CONTACTS` constant. Each link
+ * shows an icon and a label, opens in a new tab, and has hover effects.
+ */
 export const Contact = () => {
   return (
     <section
@@ -26,7 +15,7 @@ export const Contact = () => {
     >
       <h2 className="text-3xl font-bold text-center mb-10">Connect With Me</h2>
       <div className="flex justify-center gap-8">
-        {contacts.map((c, idx) => (
+        {CONTACTS.map((c, idx) => (
           <a
             key={idx}
             href={c.link}

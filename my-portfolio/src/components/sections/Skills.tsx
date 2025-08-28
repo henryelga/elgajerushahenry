@@ -1,74 +1,12 @@
 import { useState } from "react";
+import { SKILLS } from "../data/skills";
 
-const skills = {
-  Languages: [
-    "C#",
-    "TypeScript",
-    "JavaScript",
-    "Java",
-    "C++",
-    "Python",
-    "PHP",
-    "HTML",
-    "CSS",
-    "SCSS",
-    "SQL",
-    "MySQL",
-  ],
-  "Frameworks & Libraries": [
-    ".NET Framework",
-    "ASP.NET",
-    "ASP.NET MVC",
-    "React.js",
-    "React Native",
-    "Svelte",
-    "GatsbyJS",
-    "Flask",
-    "Laravel",
-    "Bootstrap",
-    "Tailwind",
-    "XAMPP",
-  ],
-  "Tools & Platforms": [
-    "Git",
-    "GitHub",
-    "GitHub Copilot",
-    "Visual Studio Code",
-    "Visual Studio",
-    "Docker",
-    "Azure DevOps Services",
-    "Figma",
-    "Canva",
-  ],
-  "Testing & Quality": [
-    "Code Review",
-    "Debugging",
-    "Fixing Bugs",
-    "Test Planning",
-    "NUnit",
-    "Jest",
-    "Playwright",
-  ],
-  "Software Development Practices": [
-    "API Development",
-    "Web Applications",
-    "Software Prototyping",
-    "Developer Documentation",
-    "Project Understanding",
-    "Technical Requirements",
-    "Product Requirements",
-  ],
-  "Soft Skills": [
-    "Problem Solving",
-    "Creative Problem Solving",
-    "Teamwork",
-    "Communication",
-    "Time Management",
-    "Attention to Detail",
-    "Fast Learner",
-  ],
-};
-
+/**
+ * Skills Section
+ *
+ * Categorizes technical and other skills with an interactive hover scroll effect.
+ * On mobile, each category can be expanded/collapsed like a dropdown.
+ */
 export const Skills = () => {
   // Track open/closed state for each category
   const [openCategories, setOpenCategories] = useState<Record<string, boolean>>(
@@ -94,7 +32,7 @@ export const Skills = () => {
 
       {/* Skills Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-16 mt-16 max-w-7xl mx-auto">
-        {Object.entries(skills).map(([category, skillList], idx) => (
+        {Object.entries(SKILLS).map(([category, skillList], idx) => (
           <div key={idx} className="flex flex-col space-y-1">
             {/* Category title */}
             <h3
