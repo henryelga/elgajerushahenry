@@ -6,6 +6,13 @@
  */
 export const PROJECTS = [
   {
+    title: "Personal Portfolio Website",
+    image: "public/projects/personalWebsite.png",
+    desc: "This website showcases my portfolio, with responsive design and interactive features.",
+    type: "Individual Project",
+    link: "https://henryelga.github.io",
+  },
+  {
     title: "Posture Pal",
     image: "public/projects/posturePal.png",
     desc: "Progressive Web App (PWA) that helps students and professionals maintain proper posture and improve overall health.",
