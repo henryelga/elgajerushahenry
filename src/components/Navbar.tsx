@@ -98,7 +98,7 @@ export const Navbar = () => {
 
             {/* Menu items */}
             <ul
-              className="text-3xl sm:text-4xl lg:text-6xl xl:text-7xl uppercase font-bold flex flex-col gap-3 items-center text-[#D1D1C7] text-center 
+              className="text-3xl sm:text-xl lg:text-3xl xl:text-7xl uppercase font-bold flex flex-col gap-3 sm:gap-1 items-center text-[#D1D1C7] text-center 
                px-4"
               style={{ maxHeight: "calc(100vh - 120px)", overflow: "hidden" }}
             >
