@@ -67,21 +67,21 @@ export const Projects = () => {
   return (
     <section
       id="projects"
-      className="relative min-h-screen bg-[#080807] text-[#D1D1C7] px-16"
+      className="relative min-h-screen bg-[#080807] text-[#D1D1C7] px-4 sm:px-8 md:px-16 py-16"
     >
       {/* Sticky Header */}
-      <h2 className="sticky top-0 z-20 font-inconsolata font-bold text-[6rem] md:text-[8rem] uppercase leading-[1] bg-[#080807] pb-4">
+      <h2 className="sticky top-0 z-20 font-inconsolata font-bold text-[4rem] sm:text-[6rem] md:text-[8rem] uppercase leading-[1] bg-[#080807] pb-4">
         Projects
       </h2>
 
-      <div className="grid grid-cols-4 gap-8 max-w-full">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-full">
         {/* LEFT: Sticky number */}
-        <div className="col-span-1">
-          <div className="sticky top-[8rem] h-0">
-            <div className="flex text-[16rem] font-bold leading-none">
+        <div className="md:col-span-1 md:block justify-center md:justify-start items-center hidden">
+          <div className="sticky top-[8rem] md:top-[8rem] h-0">
+            <div className="flex text-[6rem] sm:text-[8rem] md:text-[16rem] font-bold leading-none">
               <span>0</span>
 
-              {/* Slot-machine style animation */}
+              {/* Slot-machine animation */}
               <div className="relative w-[1ch] h-[1em] overflow-hidden">
                 <AnimatePresence mode="wait">
                   <motion.div
@@ -101,29 +101,32 @@ export const Projects = () => {
         </div>
 
         {/* RIGHT: Projects */}
-        <div className="col-span-3 space-y-[10vh]">
+        <div className="md:col-span-3 space-y-[10vh]">
           {projects.map((p, idx) => (
             <div
               key={idx}
               ref={(el) => {
                 projectRefs.current[idx] = el;
               }}
-              className="group relative"
+              className="group relative flex flex-col md:flex-col"
             >
+              {/* Number for mobile stacked view */}
+              <div className="md:hidden text-6xl font-bold text-[#D1D1C7] mb-4">
+                0{idx + 1}
+              </div>
+
               {/* Image wrapper */}
               <a
                 href={p.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block relative h-[70vh] rounded-2xl overflow-hidden shadow-lg"
+                className="block relative rounded-2xl overflow-hidden shadow-lg"
               >
-                {/* Project Image */}
                 <img
                   src={p.image}
                   alt={p.title}
-                  className="object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-105 group-hover:brightness-75"
+                  className="w-full h-auto transition-transform duration-500 ease-in-out group-hover:scale-105 group-hover:brightness-75 object-contain sm:object-contain md:object-cover"
                 />
-
                 {/* Bubble cursor */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="w-24 h-24 rounded-full bg-[#080807]/70 flex items-center justify-center text-[#D1D1C7] text-sm font-semibold">
@@ -134,9 +137,15 @@ export const Projects = () => {
 
               {/* Project Title + Description */}
               <div className="mt-4 text-center">
-                <h3 className="text-2xl font-bold text-[#D1D1C7]">{p.title}</h3>
-                <p className="text-sm text-gray-400 italic">{p.type}</p>
-                <p className="mt-2 text-gray-400">{p.desc}</p>
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#D1D1C7]">
+                  {p.title}
+                </h3>
+                <p className="text-sm sm:text-base text-gray-400 italic">
+                  {p.type}
+                </p>
+                <p className="mt-2 text-gray-400 text-sm sm:text-base">
+                  {p.desc}
+                </p>
               </div>
             </div>
           ))}
