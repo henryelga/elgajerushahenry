@@ -10,7 +10,7 @@ export const PROJECTS = [
     image: "images/personalWebsite.png",
     desc: "This website showcases my portfolio, with responsive design and interactive features.",
     type: "Individual Project",
-    link: "https://henryelga.github.io",
+    link: "https://henryelga.github.io/elgajerushahenry",
   },
   {
     title: "Posture Pal",
